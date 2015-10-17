@@ -1,3 +1,5 @@
 ENV/
 *.pyc
 settings.py
+resources.txt
+t.txt
