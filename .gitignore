@@ -3,3 +3,5 @@ ENV/
 settings.py
 resources.txt
 t.txt
+flask_server.py
+templates/
