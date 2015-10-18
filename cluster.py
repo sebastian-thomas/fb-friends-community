@@ -22,7 +22,7 @@ def kmeans(mat, no_clusters):
 			for centroid in inital_centroids:
 				j = j + 1
 				distew = find_dist(mat[centroid], mat[i])
-				print dist, distew
+				#print dist, distew
 				if distew < dist:
 					cent_clust = j
 			temp_clust[cent_clust].append(i)
@@ -38,16 +38,11 @@ def kmeans(mat, no_clusters):
 		cent_clust = 0
 		for centroid in range(len(clust_avg)):
 			distew = find_dist(mat[i], clust_avg[centroid])
-			print dist, distew
+			#print dist, distew
 			if distew < dist:
 				cent_clust = centroid
 		temp_clust2[cent_clust].append(i)
-
-
-	print "One"
-	print temp_clust
-	print "Two"
-	print temp_clust2
+		
 
 	return temp_clust2
 

@@ -67,9 +67,9 @@ def cluster_friends(major_friends_set):
 	
 	temp_clust = cluster.kmeans(mat,num_clust)
 	for clust in temp_clust:
-		print "Cluster ----"
+		print "\nCluster ----"
 		for p in clust:
-			print user_mat[p]
+			print user_mat[p] +' , ',
 
 	return temp_clust
 
@@ -156,23 +156,20 @@ def main():
 	#print json.dumps(fb_photos, indent=4, sort_keys=True)
 
 	#print json.dumps(graph, indent=4, sort_keys=True)
-	print json.dumps(graph[fb_profile['name']], indent=4, sort_keys=True)
+	#print json.dumps(graph[fb_profile['name']], indent=4, sort_keys=True)
 	print "Toatal Photos :" +str(total_photos_fetched)
 	print "Total Nodes :" 
 	print len(graph.keys())
 	#print print_major_friends(fb_profile['name'])
 	print json.dumps(major_friends_set, indent=4, sort_keys=True)
 	#get_a_gang(5,major_friends_set)
-	#get_a_gang(5,major_friends_set)
-	#get_a_gang(5,major_friends_set)
 
-	#print "Major Gangs"
-	#print "1"
+	#print "Major Gangs Random"
 	#print_gangs(get_gangs_rand(major_friends_set))
-	#print "2"
-	#print_gangs(get_gangs_rand(major_friends_set))
-	#print "3"
-	#print_gangs(get_gangs_rand(major_friends_set))
+
+	print "Major friends"
+	print major_friends_set.keys()
+
 	tc = cluster_friends(major_friends_set)
 	return tc
 
